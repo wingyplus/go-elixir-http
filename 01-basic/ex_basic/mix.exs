@@ -7,6 +7,7 @@ defmodule ExBasic.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
+      aliases: aliases(),
       deps: deps()
     ]
   end
@@ -16,6 +17,12 @@ defmodule ExBasic.MixProject do
     [
       extra_applications: [:logger],
       mod: {ExBasic.Application, []}
+    ]
+  end
+
+  defp aliases() do
+    [
+      test: "test --no-start"
     ]
   end
 
